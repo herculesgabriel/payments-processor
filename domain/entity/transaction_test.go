@@ -24,7 +24,7 @@ func TestTransaction_IsNotValidWithAmountGreaterThan1000(t *testing.T) {
 	transaction.Amount = 1001
 	err := transaction.IsValid()
 	assert.Error(t, err)
-	assert.Equal(t, "you do not have limit for this transaction", err.Error())
+	assert.Equal(t, "you do not have enough limit for this transaction", err.Error())
 
 }
 
